@@ -1,0 +1,8 @@
+#!/usr/bin/python2
+
+import  socket 
+host=socket.gethostname()
+s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+message=raw_input("enter your message")
+
+s.sendto(message,(host,9999))
