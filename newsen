@@ -1,0 +1,23 @@
+#!/usr/bin/python2
+
+import  socket 
+s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+
+
+	
+message=raw_input("navratan")
+s.sendto(message,("192.168.43.220",9333))
+while 5:
+	message=raw_input("navratan")
+	n = s.recvfrom(5000)
+	print n[0]
+	
+	
+	#s.bind((n[1][0],n[1][1]))
+def receiver():
+	s.sendto(message,("192.168.43.220",n[1][1]))
+thread.start_new_thread(sender,())
+thread.start_new_thread(receiver,())
+while 3:
+	pass
+		
